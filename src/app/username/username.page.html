@@ -1,0 +1,16 @@
+<ion-content>
+  <ion-card-subtitle>Agrega unos datos más</ion-card-subtitle>
+  <form [formGroup]="registerUserForm" (ngSubmit)="onRegisterUser()">
+      <div id="contenedor">
+          <div id="inputs">
+              <input type="text" required formControlName="username" (keyup)="checkUsername($event)"  [(ngModel)]="userData.username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" name="username"  class="form_input form-control effects">
+              <label for="">Ingresa tu nombre de usuario</label>
+              <span class="focus-border"></span>
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                  <div *ngIf="f.username.errors.required">Ingresa tu nombre de usuario</div>
+              </div>
+          </div>
+          <ion-button type="submit" expand="block">Iniciar sesión</ion-button>
+      </div>
+  </form>
+</ion-content>

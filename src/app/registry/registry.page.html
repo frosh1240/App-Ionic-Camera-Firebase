@@ -1,0 +1,29 @@
+<ion-header>
+    <button type="button" class="btn" [routerLink]="['/','session']"><i class="fa fa-arrow-left"></i></button>
+</ion-header>
+
+<ion-content>
+    <ion-card-subtitle>Crear una cuenta</ion-card-subtitle>
+    <form [formGroup]="RegisterForm" (ngSubmit)="onRegister()">
+        <div id="contenedor">
+            <div id="inputs">
+                <input type="text" required formControlName="email" [(ngModel)]="user.email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" name="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" class="form_input form-control effects">
+                <label for="">Correo eléctronico</label>
+                <span class="focus-border"></span>
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Ingresa una dirección de correo</div>
+                    <div *ngIf="f.email.errors.email">La dirección de correo debe ser valida</div>
+                </div>
+            </div>
+            <div id="inputs">
+                <input type="password" required class="form_input form-control effects" [(ngModel)]="user.password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" name="password">
+                <label for="">Contraseña</label>
+                <span class="focus-border"></span>
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Ingresa la contraseña</div>
+                </div>
+            </div>   
+            <ion-button type="submit" expand="block">Iniciar sesión</ion-button>
+        </div>
+    </form>
+</ion-content>

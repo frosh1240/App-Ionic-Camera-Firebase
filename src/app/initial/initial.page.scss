@@ -1,0 +1,28 @@
+@font-face{
+    font-family: 'Muli', sans-serif;
+    src:url('../../assets/font/muli/Muli-SemiBoldItalic.ttf');
+} 
+ion-card{
+    display: block;
+}
+
+button{
+    width: 50px !important;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+
+    img{
+        width: 18px;
+        height: 18px;
+    }
+}
+
+button:focus{
+    outline: unset;
+    box-shadow: unset;
+}
+
+ion-header{
+    background: #fff;
+}

@@ -1,0 +1,134 @@
+@font-face{
+    font-family: 'Muli', sans-serif;
+    src:url('../../assets/font/muli/Muli-SemiBoldItalic.ttf');
+} 
+
+ion-card-subtitle{
+    font-family: 'Muli',sans-serif;
+    text-align: center;
+    margin-top: 100px;
+}
+
+ion-button{
+    text-transform: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+.header-md:after{
+    background-image: none;
+}
+
+button{
+    width: 50px !important;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+}
+
+#contenedor{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    font-family: 'Muli',sans-serif;
+    
+    #inputs{
+        display: grid;
+        margin: 10px;
+        margin-top: 30px;
+    }
+
+    label{
+        position: absolute;
+        margin-top: 13px;
+        margin-left: 11px;
+        transition:all 0.2s;
+        font-size: 14px;
+        font-family: 'Muli',sans-serif;
+        color: #737373
+    }
+
+    input:focus{
+        bottom: 1px solid #ccc;
+        box-sizing: border-box; 
+        letter-spacing: 1px;
+        outline: none;
+    }
+    .effects ~ .focus-border{
+        position: relative; 
+        bottom: 2px; 
+        left: 50%; 
+        width: 0; 
+        height: 2px; 
+        background-color: #3399FF; 
+        transition: 0.4s;
+        z-index: 1;
+    }
+    .effects:focus ~ .focus-border{
+        width: 100%; 
+        transition: 0.4s;
+        left: 0;
+    }
+    
+    input[type=text],input[type=email],input[type=password]{
+        padding: 10px;
+        z-index: 1;
+        background-color: transparent;
+        border-right: unset;
+        border-top: unset;
+        border-left: unset;
+        outline: unset;
+        font-family: 'Muli',sans-serif;
+        color: #232323;
+        content: "";
+    }
+
+    input[type=text]:focus + label,input[type=email]:focus + label,input[type=password]:focus + label{
+        margin-top: -17px;
+        font-size: 11px;
+        margin-left: -2px;
+        font-family: 'Muli',sans-serif;
+    }
+
+    .point{
+        margin-top:-17px;
+        font-size: 12px;
+        margin-left: 0px;
+        font-family: 'Muli',sans-serif;
+        color: #737373;
+    }
+
+    .form-control{
+        outline: unset;
+        box-shadow: unset;
+        border-radius: unset;
+    }
+
+    .alert-danger {
+        color: #721C4D;
+        background-color: transparent;
+        border-color: transparent;
+        padding-left: unset;
+    }
+}
+
+#content-registry{
+    width: 100%;
+    display: block;
+    outline: none;
+    #registry{
+        text-align: center;
+        color: #737373;
+        margin-top: 100px;
+        h3{
+            outline: none;
+            font-size: 14px;
+            font-family: 'Muli',sans-serif;
+
+            b{
+              cursor: pointer;
+            }
+        }
+    }
+}

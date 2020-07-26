@@ -1,0 +1,45 @@
+<ion-header>
+  <div class="title"> 
+    <button type="button" class="btn" [routerLink]="['/','tabs']">
+      <img src="../../assets/icons/icon-left.svg" alt="">
+    </button>
+    <h1>Ajustes de usuario</h1>
+    <button type="button" class="btn btn-exit" (click)="exitApp()">
+      <div class="icon">
+        <img src="../../assets/icons/icon-exit.svg" alt="">
+      </div>
+    </button>
+  </div>
+</ion-header>
+
+<ion-content>
+    <div id="contenedor">
+      <div class="image">
+        <button (click)="getImage()">
+          <img src="{{ myPhoto }}">
+        </button>
+        <img src="{{ myPhoto }}">
+      </div>
+        <div id="inputs">
+            <input type="text" required class="form_input effects">
+            <label for="">Nombre de usuario</label>
+            <span class="focus-border"></span>
+        </div>
+        <div id="inputs">
+            <input type="text" required class="form_input effects">
+            <label for="">Correo eléctronico</label>
+            <span class="focus-border"></span>
+        </div>
+        <div id="inputs">
+            <input type="text" required class="form_input effects">
+            <label for="">Contraseña</label>
+            <span class="focus-border"></span>
+        </div>   
+        <div id="inputs">
+            <input type="text" required class="form_input effects">
+            <label for="">Número Telefónico</label>
+            <span class="focus-border"></span>
+        </div>   
+        <ion-button expand="block">Guardar</ion-button>
+    </div>
+</ion-content>
